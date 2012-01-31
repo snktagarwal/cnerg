@@ -1,0 +1,42 @@
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,div.paragraph,blockquote,fieldset,input{ margin:0; padding:0; }
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{ margin:0; padding:0; }
+ ul{ list-style:none; }
+ fieldset{ border:0; }
+ a img{ border:0; }
+ .clear{ clear:both; }
+ .wsite-header {
+	
+	background-position: 0 0 !important;
+	background-size: 100%;
+	font-size: 40px;
+	color: black;
+}
+ body { background: #393939 url(theme/bodybg.jpg?588184) repeat-x; font-family: Tahoma,arial, sans-serif; font-size:12px; color:#666666; height: 100%; margin:0; padding:0; }
+ a{ color: #bd7821; text-decoration: none; }
+ div.paragraph { line-height: 170%; color: #626262; font-size: 13px; padding: 5px 0px 5px 0px; }
+ p { line-height: 170%; color: #626262; font-size: 13px; padding: 5px 0px 5px 0px; }
+ h1 { font-size:40px; font-weight:bold; color:#FFFFFF; line-height:1.5; padding: 5px 0px 5px 0px; }
+ h2 { font-size:20px; color:#666666; line-height:1.5; padding: 5px 0px 5px 0px; }
+ #wrapper { background: url(/cnerg/images/containerbg.jpg) center repeat-y; }
+ #wrappertop{ background: url(/cnerg/images/containertop.jpg) top center no-repeat; }
+ #wrappertbtm{ background: url(/cnerg/images/containerbtm.jpg) bottom center no-repeat; }
+ #container{ width: 959px; margin: 0 auto; }
+ .title{ width: 959px; padding: 25px 0px 20px 0px; font-size: 30px; color: #bd7821; }
+ #navigation{ position: relative; width: 959px; height: 40px; z-index: 2; }
+ #navigation li{ float: left; z-index: 2; padding: 0px 34px 0px 0px; }
+ #navigation li a{ display: inline-block; position: relative; outline: none; height: 28px; color: #e3e3e3; z-index: 2; font-size: 15px; padding: 15px 0px 0px 0px; text-decoration: none; }
+ #navigation li a:hover, #navigation li#active a{ color: #bd7821; text-decoration: none; }
+ #header{ position: relative; width: 959px; height: 196px; z-index: 1; margin: 20px 0px 0px 0px; }
+ 
+ #wsite-menus .wsite-menu-wrap { z-index: 5000; }
+ #wsite-menus .wsite-menu { padding: 0; margin: 0; list-style: none; }
+ #wsite-menus .wsite-menu li { float: left; clear: left; width: 163px; text-align: left; }
+ #wsite-menus .wsite-menu li a { position: relative; display: block; width: 100%; background: #2a2929; border-top: 1px solid #333333; border-bottom: none; border-right: none; border-left: none; text-decoration: none; font-size: 12px; font-weight: normal; line-height:1; padding: 8px 6px 8px 12px; color: #fff; }
+ #wsite-menus .wsite-menu li a:hover { background: #333333; color: #bd7821; }
+ #content{ width: 892px; height:auto !important; min-height:400px; padding: 60px 36px 30px 31px; }
+ #footer{ width: 923px; color: #a1a0a0; font-size: 11px; text-align: right; padding: 30px 18px 30px 18px; }
+
+div.paragraph ul, div.paragraph ol { padding-left: 25px !important; margin: 5px 0 !important; overflow:hidden; }
+div.paragraph li { padding-left: 5px !important; margin: 3px 0 0 !important; }
+div.paragraph ul, div.paragraph ul li { list-style: disc outside !important; }
+div.paragraph ol, div.paragraph ol li { list-style: decimal outside !important; }
