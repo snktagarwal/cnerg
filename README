@@ -1,0 +1,17 @@
+Installation
+===========
+
+1. The content of the website goes under the 'www' directory of
+whichever Web Server you are using. To access the home page you
+currently need to access /cnerg/index.php/home
+
+2. To get the database running, visit cnerg/application/config/config.php
+and configure the database connection settings. Preferably use MYSQL
+
+3. Other specific settings are mentioned in the above config file, take an
+overview to fix stuff up.
+
+4. The MYSQL dump is provided in cnerg.dump here with. Apply it using
+mysqldump and call the database as 'cnerg' or uniformity.
+
+5. The website uses CodeIgniter, for complete docs: http://codeigniter.com/user_guide/

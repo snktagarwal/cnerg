@@ -1,0 +1,205 @@
+-- MySQL dump 10.13  Distrib 5.1.58, for debian-linux-gnu (i686)
+--
+-- Host: localhost    Database: cnerg
+-- ------------------------------------------------------
+-- Server version	5.1.58-1ubuntu1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `courses`
+--
+
+DROP TABLE IF EXISTS `courses`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `courses` (
+  `id` int(11) NOT NULL,
+  `name` varchar(400) NOT NULL,
+  `description` text NOT NULL,
+  `faculty` varchar(400) NOT NULL,
+  `course_page` varchar(400) NOT NULL,
+  `faculty_page` varchar(400) NOT NULL,
+  `img` varchar(400) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `courses`
+--
+
+LOCK TABLES `courses` WRITE;
+/*!40000 ALTER TABLE `courses` DISABLE KEYS */;
+INSERT INTO `courses` VALUES (0,'Complex Networks (CS60078)','In-depth study of large networks w.r.t to interesting phenomenon such as degree distributions and deriving asymptotic behavioral results.','Animesh Mukherjee','http://cse.iitkgp.ac.in/~animeshm/course_cnt2012.html','http://cse.iitkgp.ac.in/~animeshm','http://www.research.ibm.com/nips03workshop/internet.gif'),(2,'Information Retrieval','Study of various techniques to design a large scale data classification and storage system such as Google Search Engine.','Niloy Ganguly','http://www.facweb.iitkgp.ernet.in/~niloy/COURSE/Autumn2011/Iret/index.html','http://www.facweb.iitkgp.ernet.in/~niloy','http://informationr.net/tdw/publ/papers/models/TDWfig11.gif');
+/*!40000 ALTER TABLE `courses` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `events`
+--
+
+DROP TABLE IF EXISTS `events`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `events` (
+  `id` int(11) NOT NULL,
+  `name` varchar(400) NOT NULL,
+  `short_des` varchar(400) NOT NULL,
+  `long_des` text NOT NULL,
+  `where` varchar(400) NOT NULL,
+  `when` date NOT NULL,
+  `time` time NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `events`
+--
+
+LOCK TABLES `events` WRITE;
+/*!40000 ALTER TABLE `events` DISABLE KEYS */;
+INSERT INTO `events` VALUES (0,'Towards a Theory of Layered Architectures for Communication and Control','Architecture might be defined as the organization structure for distributed algorithms performing complex multiple functions embedded in hardware and software. ','Architecture might be defined as the organization structure for\r\ndistributed algorithms\r\nperforming complex multiple functions embedded in hardware and software. Layered\r\narchitectures are those where the organizational structure is layered\r\nin the sense that\r\nlayers obey a partial ordering and, metaphysically, layers are\r\nconditionally independent\r\ngiven ``interfaces.\'\' ?? A prime example of a layered architecture is\r\nthe architecture of the\r\ninternet and the distributed algorithms which achieve the functions it\r\nis required to\r\nfulfill.\r\nIn this talk, I discuss a theory for a layered architecture which\r\narises from a universal\r\nvariant of the Source Channel Separation Theorem of Shannon, both in a\r\na point-topoint\r\nsetting as well as a network setting. ??A similar result arises from\r\nthe theory of\r\npartially-observed stochastic control problems.\r\nIn the second part of the talk, I discuss Dynkin\'s work on General\r\nEquilibrium Theory\r\nunder uncertainty, and its role on architectural issues in control problems over\r\nnetworks.\r\n','Room No 107, CSE','2012-02-01','15:30:00');
+/*!40000 ALTER TABLE `events` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(128) NOT NULL,
+  `slug` varchar(128) NOT NULL,
+  `text` text NOT NULL,
+  `img` varchar(400) DEFAULT NULL,
+  `choose_home` enum('NO','YES') NOT NULL COMMENT 'Select ''YES'' to put the news on main page, else select ''NO''',
+  PRIMARY KEY (`id`),
+  KEY `slug` (`slug`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `news`
+--
+
+LOCK TABLES `news` WRITE;
+/*!40000 ALTER TABLE `news` DISABLE KEYS */;
+INSERT INTO `news` VALUES (1,'News1','n1','This is a test news','facebookmapoftheworld.jpg','NO'),(2,'New2','n2','This is test news 2.','facebookmapoftheworld.jpg','YES'),(3,'New meteor found.','meteor-news','A meteor was found in Kharagpur.','http://www.northeastern.edu/news/images/lazerlightning226.jpg','NO'),(4,'New meteor found.','n1','Meteor news','http://cse.iitkgp.ac.in/resgrp/cnerg/Files/photos/CNeRG%20Pics/sir_3.jpg','NO'),(5,'New meteor found.','meteor-news','sfsdf s dfsdfsd\r\nsfsdf s dfsdfsd\r\nsfsdf s dfsdfsd\r\nsfsdf s dfsdfsd\r\nsfsdf s dfsdfsd\r\nsfsdf s dfsdfsd\r\nsfsdf s dfsdfsd\r\nsfsdf s dfsdfsd','https://lh6.googleusercontent.com/-VIkbSTzIQZ0/AAAAAAAAAAI/AAAAAAAAANU/KTl81nsHTkc/s200-c-k/photo.jpg','YES');
+/*!40000 ALTER TABLE `news` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `people`
+--
+
+DROP TABLE IF EXISTS `people`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `people` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(400) NOT NULL,
+  `affiliation` enum('PROF','MTECH','PHD','ALUMNI','COLLAB') NOT NULL,
+  `url` varchar(400) NOT NULL,
+  `college` varchar(400) NOT NULL,
+  `department` varchar(400) NOT NULL,
+  `img` varchar(400) NOT NULL,
+  `img_dat` longblob NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `people`
+--
+
+LOCK TABLES `people` WRITE;
+/*!40000 ALTER TABLE `people` DISABLE KEYS */;
+INSERT INTO `people` VALUES (1,'Niloy Ganguly','PROF','www.facweb.iitkgp.ernet.in/~niloy','IIT Kharagpur','Computer Science and Engineering','http://cse.iitkgp.ac.in/resgrp/cnerg/Files/photos/CNeRG%20Pics/sir_3.jpg',''),(2,'Animesh Mukherjee','PROF','http://users.isi.it/~animeshm','IIT Kharagpur','Computer Science and Engineering','http://users.isi.it/~animeshm/mypic.jpg',''),(3,'Saptarshi Ghosh','PHD','http://cse.iitkgp.ac.in/~sghosh/','IIT Kharagpur','Computer Science and Engineering','http://cse.iitkgp.ac.in/~sghosh/self.jpg',''),(4,'Sanket Agarwal','MTECH','http://sanketagarwal.com/blog','IIT Kharagpur','Computer Science and Engineering','https://lh6.googleusercontent.com/-VIkbSTzIQZ0/AAAAAAAAAAI/AAAAAAAAANU/KTl81nsHTkc/s200-c-k/photo.jpg',''),(5,'Naveen Kumar Sharma','MTECH','http://cse.iitkgp.ac.in/~naveens/','IIT Kharagpur','Computer Science and Engineering','http://photos-a.ak.fbcdn.net/hphotos-ak-ash2/68315_1553639233375_1006986040_31556116_8114724_a.jpg','');
+/*!40000 ALTER TABLE `people` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `projects`
+--
+
+DROP TABLE IF EXISTS `projects`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `projects` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(400) NOT NULL,
+  `description` varchar(400) NOT NULL,
+  `duration` varchar(400) NOT NULL,
+  `agency` varchar(400) NOT NULL,
+  `url` varchar(400) NOT NULL,
+  `img` varchar(400) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `projects`
+--
+
+LOCK TABLES `projects` WRITE;
+/*!40000 ALTER TABLE `projects` DISABLE KEYS */;
+INSERT INTO `projects` VALUES (1,'Building Collaborative Download Framework for Wired and Wireless Networks','Building Collaborative Download Framework for Wired and Wireless Networks','July 2011 - June 2014','Department of Science and Technology (DST), Government of India','','http://www.northeastern.edu/news/images/lazerlightning226.jpg'),(2,'Optimal Solutions and Applications for the Next Generation Wireless Internet  ','Optimal Solutions and Applications for the Next Generation Wireless Internet  ',' January 2009 - December 2012','Vodafone Essar','','http://t1.gstatic.com/images?q=tbn:ANd9GcR4bW90agPvAuNwdwTvAQkNouj3h4UM9u5Y_oB2a8r6209JAa8_'),(3,'Information Spreading in a System of Mobile Agents  ','Information Spreading in a System of Mobile Agents  ','NA','French Ministry of Foreign Affairs under Science and Technology International Cooperation (STIC)-Asia Programme','','http://t2.gstatic.com/images?q=tbn:ANd9GcSRcGNe0EZXeOiLqgpwRmaRi1eHYRIUQKB0t0vfTZgzTJwm020s');
+/*!40000 ALTER TABLE `projects` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pub`
+--
+
+DROP TABLE IF EXISTS `pub`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pub` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) NOT NULL,
+  `abstract` varchar(1000) NOT NULL,
+  `authors` varchar(500) NOT NULL,
+  `proceeding` varchar(500) NOT NULL COMMENT 'Put the complete journal info here.',
+  `year` int(11) NOT NULL,
+  `url` varchar(300) NOT NULL,
+  `type` enum('JOURNAL','CONF') NOT NULL,
+  `proc_url` varchar(400) NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pub`
+--
+
+LOCK TABLES `pub` WRITE;
+/*!40000 ALTER TABLE `pub` DISABLE KEYS */;
+INSERT INTO `pub` VALUES (6,'On Coverage Bounds of Unstructured Peer-to-Peer Networks','','Joydeep Chandra and Niloy Ganguly','Advances in Complex Systems (ACS) Journal, World Scientific Publishing Co. ',2011,'','JOURNAL','','2011-05-01'),(4,'Case study on Alphabetic Bipartite Network','','A. Maiti, N. Ganguly',' Acta Physica Polonica',2011,'http://cse.iitkgp.ac.in/resgrp/cnerg/Files/Abyay/actaPhysica_Polinica.pdf','JOURNAL','','2011-11-01'),(5,'Complex Network Analysis Reveals Kernel-Periphery Structure in Web Search Queries','','Rishiraj Saha Roy, Niloy Ganguly, Monojit Choudhury and Naveen Kumar Singh','Proceedings of the 2nd International ACM SIGIR (Association for Computing Machinery Special Interest Group on Information Retrieval) Workshop on Query Representation and Understanding 2011 (QRU 2011), 28 July, 2011, Beijing, China, pages 5 – 8',2011,'http://ciir.cs.umass.edu/sigir2011/qru/roy+al.pdf','JOURNAL','','2011-01-02'),(7,'Understanding how both the partitions of a bipartite network affect its one-mode projection','','Animesh Mukherjee, Monojit Choudhury, Niloy Ganguly','Physica A (2011), doi:10.1016/j.physa.2011.05.00',2011,'','JOURNAL','','2012-01-18'),(8,'Broadcasting using Directional Antenna in DTN as an Epidemic Dynamics','','Abyayananda Maiti, Fernando Peruani, Romit Roy Choudhury, and Niloy Ganguly','Physica A (2011), doi:10.1016/j.physa.2011.05.00',2010,'http://cse.iitkgp.ac.in/resgrp/cnerg/Files/Abyay/icdcn_PhDforum10.pdf','JOURNAL','','2011-04-28'),(9,' Coverage-maximization in networks under resource constraints','','Subrata Nandi, Lutz Brusch, Andreas Deutsch and Niloy Ganguly','Physical Review E',2010,'','JOURNAL','','2012-01-10'),(10,'Unsupervised Query Segmentation Using only Query Log','','Nikita Mishra, Rishiraj Saha Roy, Niloy Ganguly, Srivatsan Laxman and Monojit Choudhury','Posters of the 20th International World Wide Web Conference 2011 (WWW 2011) Posters',2011,'http://www.www2011india.com/proceeding/companion/p91.pdf','CONF','http://www.www2011india.com/proceeding/companion/p91.pdf','2012-01-20');
+/*!40000 ALTER TABLE `pub` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2012-01-31 17:37:55
