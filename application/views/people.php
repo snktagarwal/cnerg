@@ -1,3 +1,50 @@
+ 
+<div id="navigation">
+                <table>
+                <tr>
+                	<td width="72%">
+                    <ul>
+                    <li  style="position: relative; ">
+	                    	<a href="home" style="position: relative; ">Home</a>
+                    </li>
+                    <li id="pg873600280878711087" style="position: relative; ">
+                    	<a href="about" style="position: relative; ">About</a>
+                    </li>
+                    <li id="pg849208609319064705" style="position: relative; ">
+                    	<a href="projects" style="position: relative; ">Projects</a>
+                    </li>
+                    <li id="pg289405349604947483" style="position: relative; ">
+                    	<a href="publications1" style="position: relative; ">Publications</a>
+                    </li>
+                    <li id="pg604785984957670984" style="position: relative; ">
+                    	<a href="courses" style="position: relative; ">Courses</a>
+                    </li>
+                    <li id="active" style="position: relative; ">
+                    	<a href="people" style="position: relative; ">People</a>
+                    </li>
+                    <li id="pg328664862367688996" style="position: relative; ">
+                    	<a href="news" style="position: relative; ">News</a>
+                    </li>
+                    <li id="pg667435914845654009" style="position: relative; ">
+                    	<a href="activities" style="position: relative; ">Activities</a>
+                    </li>
+                  	</ul>
+                
+                </td>
+                <td width="17%">
+                
+                	<div class="fb-like" data-href="https://www.facebook.com/pages/CNeRG/122322841226800" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+                	
+                	</td>
+                	<td width="11%">
+                	<a href="https://twitter.com/CNeRGIITKgp" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @CNeRGIITKgp</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</td>
+                	</tr>
+                	
+                </table>
+               </div>
+ 
  <div id="content">
                     <div id='wsite-content' class='wsite-not-footer'>
 <div class='wsite-not-footer'>
@@ -15,12 +62,27 @@
 
 <?php foreach($people['PROF'] as $prof): ?>
 
-<div><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:59.5%;padding:0 5px'><div ><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:49.5%;padding:0 5px'><div ><div style="text-align: center;"><a><img src='<?php echo $prof["img"]?>' style="margin-top: 10px; margin-bottom: 10px; margin-left: 0; margin-right: 0; border-width:1px;padding:6px;width:100px; height:100px" alt="Picture" class="galleryImageBorderBlack" /></a><div style="display: block; font-size: 90%; margin-top: -10px; margin-bottom: 10px;"></div></div></div>
+<div><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:59.5%;padding:0 5px'><div ><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:49.5%;padding:0 5px'>
 
-</td><td class='wsite-multicol-col' style='padding:0 5px'><div  class="paragraph editable-text" style=" text-align: left; "><font color="#000000" size="3"><strong style="">
-<br /><a href='<?php echo $prof["url"] ?>'><?php echo $prof['name'] ?></a></strong><br />
-<br /><?php echo $prof['department'] ?>
-<br /><?php echo $prof['college'] ?>
+<div style="text-align: center;">
+<a><img src='<?php echo $prof["img"]?>' style="margin-top: 10px; margin-bottom: 10px; margin-left: 0; margin-right: 0; border-width:1px;padding:6px;width:100px; height:100px" alt="Picture" class="galleryImageBorderBlack" /></a>
+</div>
+
+</td><td class='wsite-multicol-col' style='padding:0 5px'><div  class="paragraph editable-text" style=" text-align: left; ">
+
+<font color="#000000" size="3">
+
+	<strong><br />
+		<a href='<?php echo $prof["url"] ?>'>
+			<?php echo $prof['name'] ?>
+		</a>
+	</strong><br />
+	
+	<p>
+		<?php echo $prof['email'] ?>	<br /><br />
+		<?php echo $prof['res_area'] ?>	<br />
+	</p>
+	
 
 </font><br /><br /></div>
 
@@ -36,12 +98,17 @@
 
 <?php foreach($people['PHD'] as $prof): ?>
 
-<div><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:59.5%;padding:0 5px'><div ><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:49.5%;padding:0 5px'><div ><div style="text-align: center;"><a><img src='<?php echo $prof["img"]?>' style="margin-top: 10px; margin-bottom: 10px; margin-left: 0; margin-right: 0; border-width:1px;padding:6px;width:100px; height:100px" alt="Picture" class="galleryImageBorderBlack" /></a><div style="display: block; font-size: 90%; margin-top: -10px; margin-bottom: 10px;"></div></div></div>
+<div><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:59.5%;padding:0 5px'><div ><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:49.5%;padding:0 5px'><div >
+<div style="text-align: center;"><a><img src='<?php echo $prof["img"]?>' style="margin-top: 10px; margin-bottom: 10px; margin-left: 0; margin-right: 0; border-width:1px;padding:6px;width:100px; height:100px" alt="Picture" class="galleryImageBorderBlack" /></a><div style="display: block; font-size: 90%; margin-top: -10px; margin-bottom: 10px;"></div>
 
-</td><td class='wsite-multicol-col' style='padding:0 5px'><div  class="paragraph editable-text" style=" text-align: left; "><font color="#000000" size="3"><strong style="">
-<br /><a href='<?php echo $prof["url"] ?>'><?php echo $prof['name'] ?></a></strong><br />
-<br /><?php echo $prof['department'] ?>
-<br /><?php echo $prof['college'] ?>
+</td><td class='wsite-multicol-col' style='padding:0 5px'><div  class="paragraph editable-text" style=" text-align: left; "><font color="#000000" size="3">
+
+	<strong style=""><br />
+		<a href='<?php echo $prof["url"] ?>'>
+			<?php echo $prof['name'] ?>
+		</a>
+	</strong><br />
+
 </font><br /><br /></div>
 
 </td></tr></tbody></table></div></div></div></div>
@@ -56,12 +123,13 @@
 
 <?php foreach($people['MTECH'] as $prof): ?>
 
-<div><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:59.5%;padding:0 5px'><div ><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:49.5%;padding:0 5px'><div ><div style="text-align: center;"><a><img src='<?php echo $prof["img"]?>' style="margin-top: 10px; margin-bottom: 10px; margin-left: 0; margin-right: 0; border-width:1px;padding:6px;width:100px; height:100px" alt="Picture" class="galleryImageBorderBlack" /></a><div style="display: block; font-size: 90%; margin-top: -10px; margin-bottom: 10px;"></div></div></div>
+<div><div class="wsite-multicol" style="padding-bottom: 40px;"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:59.5%;padding:0 5px'><div ><div class="wsite-multicol"><div style='padding-right:1.2%'><div class='wsite-multicol-table-wrap' style='margin:0 -5px'><table class='wsite-multicol-table'><tbody class='wsite-multicol-tbody'><tr class='wsite-multicol-tr'><td class='wsite-multicol-col' style='width:49.5%;padding:0 5px'><div >
+
+<div style="text-align: center;"><a><img src='<?php echo $prof["img"]?>' style="margin-top: 10px; margin-bottom: 10px; margin-left: 0; margin-right: 0; border-width:1px;padding:6px;width:100px; height:100px" alt="Picture" class="galleryImageBorderBlack" /></a><div style="display: block; font-size: 90%; margin-top: -10px; margin-bottom: 10px;"></div>
 
 </td><td class='wsite-multicol-col' style='padding:0 5px'><div  class="paragraph editable-text" style=" text-align: left; "><font color="#000000" size="3"><strong style="">
 <br /><a href='<?php echo $prof["url"] ?>'><?php echo $prof['name'] ?></a></strong><br />
-<br /><?php echo $prof['department'] ?>
-<br /><?php echo $prof['college'] ?>
+
 </font><br /><br /></div>
 
 </td></tr></tbody></table></div></div></div></div>
@@ -76,22 +144,7 @@
 
                 <div class="clear"></div>    
                 </div>
-                    <div id="footer">
-                        
-<script type='text/javascript'>
-<!--
 
-if (document.cookie.match(/(^|;)\s*is_mobile=1/)) {
-	document.write(
-		"&nbsp;&nbsp;&nbsp;&nbsp;" +
-		"<a href='?mobile'>Mobile Site</a>"
-	);
-}
-
-//-->
-</script>
-
-                    </div>
                  <div class="clear"></div>    
                 </div>
             </div>        

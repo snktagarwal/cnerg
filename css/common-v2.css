@@ -1271,6 +1271,7 @@ hr.styled-hr {
 	border-collapse: collapse;
 	table-layout: fixed;
 	width: 100%;
+	vertical-align: top;
 }
 
 .wsite-multicol-col {

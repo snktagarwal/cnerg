@@ -59,6 +59,14 @@ if (Prototype.Browser.IE) window.onload=initFlyouts; else document.observe('dom:
 </script>
 </head>
 <body class="wsite-theme-light wsite-page-index">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div id="wrapper">
         <div id="wrappertop">
             <div id="wrappertbtm">
@@ -78,31 +86,4 @@ if (Prototype.Browser.IE) window.onload=initFlyouts; else document.observe('dom:
             	<h2 align="center" > Complex Network Research Group </h2>
             	<h2 align="center" > CSE, Indian Institute of technology, Kharagpur </h2>
             </div>
-                <div id="navigation">
-                    <ul>
-                    <li id="active" style="position: relative; ">
-	                    	<a href="home" style="position: relative; ">Home</a>
-                    </li>
-                    <li id="pg873600280878711087" style="position: relative; ">
-                    	<a href="about" style="position: relative; ">About</a>
-                    </li>
-                    <li id="pg849208609319064705" style="position: relative; ">
-                    	<a href="projects" style="position: relative; ">Projects</a>
-                    </li>
-                    <li id="pg289405349604947483" style="position: relative; ">
-                    	<a href="publications1" style="position: relative; ">Publications</a>
-                    </li>
-                    <li id="pg604785984957670984" style="position: relative; ">
-                    	<a href="courses" style="position: relative; ">Courses</a>
-                    </li>
-                    <li id="pg513741096409430388" style="position: relative; ">
-                    	<a href="people" style="position: relative; ">People</a>
-                    </li>
-                    <li id="pg328664862367688996" style="position: relative; ">
-                    	<a href="news" style="position: relative; ">News</a>
-                    </li>
-                    <li id="pg667435914845654009" style="position: relative; ">
-                    	<a href="activities" style="position: relative; ">Activities</a>
-                    </li>
-                  	</ul>
-                </div>
+                

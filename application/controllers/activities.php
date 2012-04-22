@@ -4,13 +4,14 @@ class Activities extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		//$this->load->model('news_model');
+		$this->load->model('event_model');
 	}
 
 	public function index()
 	{
 		
-		$data['title'] = 'Home Page';
+		$data['title'] = "Home Page";
+		$data["event_list"] = $this->event_model->get_events();
 		
 		$this->load->helper('url');
 		$this->load->view('header', $data);

@@ -17,12 +17,13 @@ ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{ margi
  p { line-height: 170%; color: #626262; font-size: 13px; padding: 5px 0px 5px 0px; }
  h1 { font-size:40px; font-weight:bold; color:#FFFFFF; line-height:1.5; padding: 5px 0px 5px 0px; }
  h2 { font-size:20px; color:#666666; line-height:1.5; padding: 5px 0px 5px 0px; }
+ h3, h4 { color: black;}
  #wrapper { background: url(/cnerg/images/containerbg.jpg) center repeat-y; }
  #wrappertop{ background: url(/cnerg/images/containertop.jpg) top center no-repeat; }
  #wrappertbtm{ background: url(/cnerg/images/containerbtm.jpg) bottom center no-repeat; }
  #container{ width: 959px; margin: 0 auto; }
  .title{ width: 959px; padding: 25px 0px 20px 0px; font-size: 30px; color: #bd7821; }
- #navigation{ position: relative; width: 959px; height: 40px; z-index: 2; }
+ #navigation{ position: relative; height: 40px; z-index: 2; }
  #navigation li{ float: left; z-index: 2; padding: 0px 34px 0px 0px; }
  #navigation li a{ display: inline-block; position: relative; outline: none; height: 28px; color: #e3e3e3; z-index: 2; font-size: 15px; padding: 15px 0px 0px 0px; text-decoration: none; }
  #navigation li a:hover, #navigation li#active a{ color: #bd7821; text-decoration: none; }
