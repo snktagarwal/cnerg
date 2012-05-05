@@ -59,12 +59,12 @@
 
 </td><td class="wsite-multicol-col" style="padding:0 5px">
 
-<div class="paragraph editable-text" style=" text-align: left; ">
-<h2><b> <?php echo $news_item['title']; ?> </b></h2>
-<div  class="paragraph editable-text" style=" text-align: left; display: block; "> Text: <?php echo $news_item['text']; ?>  </div>
-</div>
+	<div class="paragraph editable-text" style=" text-align: left; ">
+		<h2><b> <?php echo $news_item['title']; ?> </b></h2>
+		<div class="paragraph editable-text"> <i>Date: <?php echo $news_item['date']; ?> </i></div>
+		<div  class="paragraph editable-text" style=" text-align: left; display: block; "> <?php echo $news_item['text']; ?>  </div>
+	</div>
 
-<div class='blog-social'><div class='blog-social-item'><a class='twitter-share-button' href='http://twitter.com/share?url=http%3A%2F%2Fwww.mobs-lab.org%2F1%2Fpost%2F2012%2F01%2Fnature-physics-insight-complexity.html' data-count='horizontal'></a></div><div class='blog-social-item blog-fb-like'><fb:like href='http://www.mobs-lab.org/1/post/2012/01/nature-physics-insight-complexity.html' show_faces='false' layout='button_count' width='90'></fb:like></div><div style='clear:both'></div></div>
 
 </td></tr></tbody></table></div></div></div></div>
 

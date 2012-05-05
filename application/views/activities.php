@@ -43,6 +43,8 @@
                 	
                 </table>
                </div>
+               
+               
 <div id="content">
 <div id="wsite-content" class="wsite-not-footer">
 <div class="wsite-not-footer">
@@ -54,9 +56,8 @@
 <div style="display: block; font-size: 90%; margin-top: -10px; margin-bottom: 10px;"></div></div></div>
 
 </td><td class="wsite-multicol-col" style="padding:0 15px">
-
-<div><a>
-<img src='<?php echo base_url()."/cnerg/images/talks.jpg"?>' style="margin-top: 10px; margin-bottom: 10px; margin-left: 0; margin-right: 0; padding:6px;width:100%;height:30px;" alt="Picture" class="galleryImageBorderBlack"></a><div style="display: block; font-size: 90%; margin-top: -10px; margin-bottom: 10px;"></div></div></div>
+<h3>Events and talks</h3>
+<br />
 <div>
 					<?php foreach($event_list as $event): ?>
 					

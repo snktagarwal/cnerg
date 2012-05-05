@@ -12,9 +12,9 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		//$data['news'] = array_splice($this->news_model->get_news(),1);
-		$data['news'] = $this->news_model->get_news();
+		$data['news'] = $this->news_model->get_home_news();
 		$data['pub_list'] = array_splice($this->pub_model->get_latest_pub(),0,2);
-		$data['event_list'] = $this->event_model->get_events();
+		$data['event_list'] = $this->event_model->get_home_events();
 		
 		$data['title'] = 'Home Page';
 		

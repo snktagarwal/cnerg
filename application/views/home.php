@@ -53,12 +53,12 @@
 			<table id="left-table" class=".wsite-multicol-table" style="vertical-align: top;"> <!-- left side of contents -->
 			
 				<tr id="about">
-					<h4>About CNeRG</h4> <!-- Fill in the details of what CNeRG is all about! -->
+					<h3>About CNeRG</h3> <!-- Fill in the details of what CNeRG is all about! -->
 					Here goes a description about what CNeRG is and how it functions et al. <br /><br />
 				</tr>
 				
 				<tr id="events"> <!-- Event and talks list -->
-					<h4>Events and talks</h4>
+					<h3>Events and talks</h3>
 					<br />
 					<?php foreach($event_list as $event): ?>
 					
@@ -70,6 +70,9 @@
 						
 					<?php endforeach ?> <!-- Event and talks list ends -->
 				</tr>
+				<div style="padding-bottom: 50px;">
+				<a href='<?php echo base_url()."cnerg/index.php/activities" ?>'> All activities ... </a>
+				</div>
 				
 			</table> <!-- left side of contents end -->
 				
@@ -77,10 +80,11 @@
 		
 		<td id="right" width="40%"> <!-- right side td -->
 			<!-- contents of the right side -- majorly news items -->
+			<h4>Latest news </h4>
 			<table id="right-table" class=".wiste-multicol-table">
 				<?php foreach($news as $news_item): ?>
 
-					<h3><b> <?php echo $news_item['title']; ?> </b></h3>
+					<h5> <?php echo $news_item['title']; ?> </h5>
 					<div class="paragraph editable-text" style=" text-align: left; ">
 						<?php echo $news_item['text']; ?>  
 					</div>
@@ -88,7 +92,7 @@
 				<?php endforeach ?>
 
 			</table>
-			<a href='<?php echo base_url()."cnerg/index.php/news" ?>'> All news </a>
+			<a href='<?php echo base_url()."cnerg/index.php/news" ?>'> All news ... </a>
 		</td> <!-- right side td ends -->
 		
 	</tr>

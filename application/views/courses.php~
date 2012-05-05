@@ -1,3 +1,50 @@
+
+<div id="navigation">
+                <table>
+                <tr>
+                	<td width="72%">
+                    <ul>
+                    <li  style="position: relative; ">
+	                    	<a href="home" style="position: relative; ">Home</a>
+                    </li>
+                    <li id="pg873600280878711087" style="position: relative; ">
+                    	<a href="about" style="position: relative; ">About</a>
+                    </li>
+                    <li id="pg849208609319064705" style="position: relative; ">
+                    	<a href="projects" style="position: relative; ">Projects</a>
+                    </li>
+                    <li id="pg289405349604947483" style="position: relative; ">
+                    	<a href="publications1" style="position: relative; ">Publications</a>
+                    </li>
+                    <li id="pg604785984957670984" style="position: relative; ">
+                    	<a href="courses" style="position: relative; ">Courses</a>
+                    </li>
+                    <li id="pg513741096409430388" style="position: relative; ">
+                    	<a href="people" style="position: relative; ">People</a>
+                    </li>
+                    <li id="pg328664862367688996" style="position: relative; ">
+                    	<a href="news" style="position: relative; ">News</a>
+                    </li>
+                    <li id="pg667435914845654009" style="position: relative; ">
+                    	<a href="activities" style="position: relative; ">Activities</a>
+                    </li>
+                  	</ul>
+                
+                </td>
+                <td width="17%">
+                
+                	<div class="fb-like" data-href="https://www.facebook.com/pages/CNeRG/122322841226800" data-send="true" data-layout="button_count" data-width="50" data-show-faces="true"></div>
+                	
+                	</td>
+                	<td width="11%">
+                	<a href="https://twitter.com/CNeRGIITKgp" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @CNeRGIITKgp</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+						</td>
+                	</tr>
+                	
+                </table>
+               </div>
+
                 <div id="content">
                     <div id='wsite-content' class='wsite-not-footer'>
 <div class='wsite-not-footer'>
@@ -9,7 +56,7 @@
 <h2 style = "padding-top:10px" ><b> <?php echo $course['name'] ?></b></h2>
 <a href='<?php echo $course["faculty_page"]?>' style = "padding-top:10px" > <b>Faculty: </b><?php echo $course['faculty'] ?></a>
 <p style="padding-top:20px;"><?php echo $course['description'] ?></p>
-<p style = "padding-top:10px" > <b>Course page: </b><?php echo $course['course_page'] ?></p>
+<p style = "padding-top:10px" > <b>Course page: </b><a href='<?php echo $course["course_page"] ?>' ><?php echo $course['course_page'] ?></a></p>
 <br />
 </div>
 
